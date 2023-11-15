@@ -11,5 +11,13 @@ class Form1(Form1Template):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
+    alert(f'Hello!')
+
+  def map_1_bounds_changed(self, **event_args):
+    """This method is called when the viewport bounds have changed."""
+    pass
+
+  def map_1_drag(self, **event_args):
+    """This method is called This event is repeatedly fired while the user drags the map."""
     pass
 
