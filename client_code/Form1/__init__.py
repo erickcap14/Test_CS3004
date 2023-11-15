@@ -21,3 +21,7 @@ class Form1(Form1Template):
     """This method is called This event is repeatedly fired while the user drags the map."""
     pass
 
+  def map_1_data_removeproperty(self, feature, name, old_value, **event_args):
+    """This method is called when a feature's property is removed."""
+    pass
+
