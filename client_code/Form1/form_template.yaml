@@ -12,13 +12,13 @@ components:
   name: content_panel
   layout_properties: {slot: footer-links-left}
   components:
-  - name: map_1
-    properties: {spacing_above: small, spacing_below: small}
-    type: GoogleMap
-    layout_properties: {grid_position: 'OKSGZG,GDMJOG'}
-    event_bindings: {bounds_changed: map_1_bounds_changed, drag: map_1_drag, data_removeproperty: map_1_data_removeproperty}
   - name: button_1
     properties: {text: Some Button}
     type: Button
     layout_properties: {grid_position: 'SHQLSL,UNKPUR'}
     event_bindings: {click: button_1_click}
+- name: map_1
+  properties: {spacing_above: small, spacing_below: small}
+  type: GoogleMap
+  layout_properties: {slot: default}
+  event_bindings: {bounds_changed: map_1_bounds_changed, drag: map_1_drag, data_removeproperty: map_1_data_removeproperty}
