@@ -3,7 +3,44 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:dashboard.html'}
 components:
-- type: ColumnPanel
-  properties: {}
-  name: content_panel
+- name: enemy
+  properties:
+    items: [Enemy]
+  type: DropDown
+  layout_properties: {slot: nav-right}
+- name: friendly
+  properties:
+    items: [Friendly]
+  type: DropDown
+  layout_properties: {slot: nav-right}
+- name: ACMs
+  properties:
+    items: [ACMs]
+  type: DropDown
+  layout_properties: {slot: nav-right}
+- name: TCMs
+  properties:
+    items: [TCMs]
+  type: DropDown
+  layout_properties: {slot: nav-right}
+- name: Overlay_Title
+  properties: {text: Overlays, bold: true, italic: false}
+  type: Label
+  layout_properties: {slot: title}
+- name: xy_panel_1
+  properties: {height: 498}
+  type: XYPanel
   layout_properties: {slot: default}
+  components:
+  - name: map_1
+    properties: {height: 497}
+    type: GoogleMap
+    layout_properties: {x: 3.53125, y: 5.296875, width: 1728}
+- name: button_1
+  properties: {text: button_1}
+  type: Button
+  layout_properties: {slot: sidebar}
+- name: button_2
+  properties: {text: button_2}
+  type: Button
+  layout_properties: {slot: sidebar}
